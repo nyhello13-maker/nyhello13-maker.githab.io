@@ -1,0 +1,205 @@
+/* ============================================================
+   Level.Travel — Colors & Type
+   Sourced from lt-frontend/packages/lt-kit/src/styles/palette.css
+   and Figma metadata (top fonts/colors by usage).
+   ============================================================ */
+
+/* -------- Fonts -------- */
+@font-face {
+  font-family: 'ONY One Beta';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/ONYOneBeta-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'ONY One Beta';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/ONYOneBeta-Medium.woff2') format('woff2');
+}
+
+:root {
+  /* ============== Colors — brand ============== */
+  --lt-primary:        #d2ff1f;   /* lime — primary action / homepage header */
+  --lt-primary-bright: #c5ff33;   /* secondary lime accent */
+  --lt-secondary:      #ff611d;   /* orange — primary CTA / brand */
+  --lt-secondary-alt:  #ff561e;   /* orange variant seen in Figma */
+
+  /* ============== Colors — neutrals ============== */
+  --lt-black:        #000;
+  --lt-black-base:   #17181a;     /* near-black text */
+  --lt-black-light:  #4d4d4d;
+  --lt-grey-1:       #73716e;     /* primary muted text (figma rgb 115,113,110) */
+  --lt-grey-2:       #b3aea3;     /* tertiary text / borders */
+  --lt-grey-3:       #e3e1dd;     /* hairlines / dividers */
+  --lt-grey-medium:  #919499;
+  --lt-grey-light:   #c2c5cc;
+  --lt-white-light:  #e6e9ee;
+  --lt-white:        #fff;
+  --lt-background:   #f3f3f3;     /* canvas grey */
+
+  /* ============== Colors — semantic / info ============== */
+  --lt-blue:         #007aff;
+  --lt-light-blue:   #e6f2ff;
+  --lt-green:        #70970e;
+  --lt-green-light:  #eeffc2;
+  --lt-darklime:     #70970e;
+  --lt-teal:         #c4eee3;
+  --lt-teal-light:   #e6f6ef;
+  --lt-lightorange:  #ffe6dd;
+  --lt-pink:         #ffe1fb;
+  --lt-magentalight: #efccfe;
+  --lt-vanta-pink:   #f968d3;
+  --lt-violet:       #50287d;
+  --lt-purple:       #9747ff;     /* accent (rgb 151,71,255) */
+  --lt-blue-soft:    #cde1fe;     /* tag/chip blue */
+
+  /* ============== Semantic foreground ============== */
+  --fg-primary:   var(--lt-black);
+  --fg-secondary: var(--lt-grey-1);
+  --fg-tertiary:  var(--lt-grey-2);
+  --fg-on-lime:   var(--lt-black);
+  --fg-on-orange: var(--lt-white);
+  --fg-link:      var(--lt-secondary);
+
+  /* ============== Surfaces ============== */
+  --bg-canvas:   var(--lt-background);
+  --bg-surface:  var(--lt-white);
+  --bg-muted:    var(--lt-grey-3);
+  --bg-inverse:  var(--lt-black);
+
+  /* ============== Borders ============== */
+  --border-subtle:  var(--lt-grey-3);
+  --border-default: var(--lt-grey-2);
+  --border-strong:  var(--lt-black);
+
+  /* ============== Typography — family ============== */
+  --font-sans: 'ONY One Beta', 'Inter', -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* ============== Typography — weights ============== */
+  --fw-regular: 400;  /* @kind font */
+  --fw-medium:  500;  /* @kind font */
+
+  /* ============== Type scale (px-equiv on 16px root) ============== */
+  /* Display & Headlines (matches lt-kit fonts.css mixins) */
+  --h1-size: 40px;  --h1-line: 46px;   /* headline-1 */
+  --h2-size: 34px;  --h2-line: 34px;   /* headline-2 */
+  --h3-size: 28px;  --h3-line: 34px;   /* headline-3 */
+  --h4-size: 22px;  --h4-line: 26px;   /* headline-4 */
+  --h5-size: 18px;  --h5-line: 22px;   /* headline-5 */
+  --h6-size: 16px;  --h6-line: 20px;   /* headline-6 */
+  --h7-size: 14px;  --h7-line: 16px;   /* headline-7 */
+  --h8-size: 12px;  --h8-line: 16px;   /* headline-8 */
+
+  /* Body text */
+  --text-1-size: 14px; --text-1-line: 16px;  /* body default */
+  --text-2-size: 12px; --text-2-line: 16px;  /* small / metadata */
+  --text-3-size: 12px; --text-3-line: 14px;  /* dense */
+  --text-4-size: 12px; --text-4-line: 13px;  /* uppercase eyebrow (0.1em tracking) */
+  --text-5-size: 9px;  --text-5-line: 12px;  /* micro */
+
+  /* Display (hero) */
+  --display-size: 50px; --display-line: 50px;  /* used in hero / landing */
+
+  /* ============== Radii ============== */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;     /* default --border-radius from lt-kit */
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-pill: 999px;
+
+  /* ============== Shadows ============== */
+  --shadow-card: 0 4px 8px 0 rgba(0,0,0,0.06),
+                 0 0 0 1px rgba(106,106,106,0.08);
+  --shadow-sm:   0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md:   0 8px 24px rgba(0,0,0,0.10);
+  --shadow-lg:   0 24px 48px rgba(0,0,0,0.18);
+  --shadow-overlay: 0 0 0 100vmax rgba(0,0,0,0.4);
+
+  /* ============== Spacing scale (8pt base) ============== */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+
+  /* ============== Interaction tokens ============== */
+  --hover-alpha: 0.06;       /* @kind other */
+  --pressed-alpha: 0.12;     /* @kind other */
+  --disabled-opacity: 0.4;   /* @kind other */
+
+  /* ============== Animations ============== */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);  /* @kind other */
+  --dur-fast: 150ms;  /* @kind other */
+  --dur-base: 200ms;  /* @kind other */
+  --dur-slow: 300ms;  /* @kind other */
+  --fade-in-animation:  fadeIn 150ms ease-in-out;   /* @kind other */
+  --fade-out-animation: fadeOut 150ms ease-in-out;  /* @kind other */
+  --scale-fade-in-animation: scaleFadeIn 250ms var(--ease-standard);   /* @kind other */
+  --scale-fade-out-animation: scaleFadeOut 250ms var(--ease-standard); /* @kind other */
+
+  /* ============== Breakpoints ============== */
+  --xs-screen: 640px;
+  --sm-screen: 768px;
+  --md-screen: 992px;
+  --lg-screen: 1024px;
+  --xl-screen: 1208px;
+}
+
+/* ============== Base typography ============== */
+html, body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  color: var(--fg-primary);
+  background: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  margin: 0;
+  color: var(--fg-primary);
+}
+
+h1 { font-size: var(--h1-size); line-height: var(--h1-line); letter-spacing: -0.01em; }
+h2 { font-size: var(--h2-size); line-height: var(--h2-line); letter-spacing: -0.01em; }
+h3 { font-size: var(--h3-size); line-height: var(--h3-line); }
+h4 { font-size: var(--h4-size); line-height: var(--h4-line); }
+h5 { font-size: var(--h5-size); line-height: var(--h5-line); }
+h6 { font-size: var(--h6-size); line-height: var(--h6-line); }
+
+p { font-size: var(--text-1-size); line-height: var(--text-1-line); margin: 0; }
+
+.eyebrow {
+  font-size: var(--text-4-size);
+  line-height: var(--text-4-line);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: var(--fw-medium);
+  color: var(--fg-secondary);
+}
+
+.text-muted { color: var(--fg-secondary); }
+.text-mute2 { color: var(--fg-tertiary); }
+
+/* ============== Animations ============== */
+@keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes scaleFadeIn  { from { opacity: 0; scale: 98%; } to { opacity: 1; scale: 100%; } }
+@keyframes scaleFadeOut { from { opacity: 1; scale: 100%; } to { opacity: 0; scale: 98%; } }
+@keyframes spin { 0% { transform: rotate(0); } 100% { transform: rotate(360deg); } }
+@keyframes pulse { 0% { opacity: .25 } 50% { opacity: 1 } 100% { opacity: .25 } }

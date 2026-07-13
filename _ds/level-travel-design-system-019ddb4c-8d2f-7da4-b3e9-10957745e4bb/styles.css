@@ -1,0 +1,7 @@
+/* ============================================================
+   Level.Travel Design System — canonical global stylesheet.
+   Consumers link THIS one file; it pulls in tokens, fonts and
+   base typography. Page/component-scoped CSS (hotel page, banner
+   variants, etc.) stays local to its own files and is not global.
+   ============================================================ */
+@import './colors_and_type.css';
